@@ -54,6 +54,11 @@ a
 		color: #fff
 		text-decoration: none
 
+a.button-link
+	padding: 12px 20px
+	background-color: #fff
+	border-radius: 20px	
+
 nav
 	z-index: 999999
 	position: fixed 
@@ -67,6 +72,10 @@ nav
 				font-size: 30px
 				font-weight: 600
 				letter-spacing: 2px
+				display: inline-block
+				padding: 0 0.5em
+				border: 1px solid #fff
+				color: #fff
 		.navbar
 			.main-nav
 				display: flex
@@ -108,23 +117,54 @@ header
 		background: url('../img/angle-bg.png') no-repeat scroll center bottom -120px / 100% rgba(0, 120, 201, 0.4)
 	.container
 		.header-block
-			height: 50%
-			.owl-stage-outer
+			.main-text
+				color: #fff
+				padding: 2em 0
+				h2 
+					font-size: 40px
+					font-weight: 600
+					line-height: 44px
+					margin-bottom: 1em
+				p
+					margin-bottom: 4em
+				a
+					color: #13a8da
+			.bg-owl-carousel
+				display: flex
+				justify-content: center
+				align-items: center
+				width: 246px
+				height: 474px
+				background-image: url('../img/mobile2_2.png')
+				background-repeat: no-repeat
+				background-position: 50% 0%
+				.owl-stage-outer
 
-				.owl-stage					
-					.owl-item
-						.owl-item-img	
-							display: flex
-							justify-content: center					
-							img							
-								width: 200px
+					.owl-stage					
+						.owl-item
+							.owl-item-img	
+								display: flex
+								justify-content: center	
+												
+								img							
+									width: 200px
 .service
-	height: 100vh
+	padding: 100px 0
 	width: 100%
-	background-color: yellow
-	.service-block
+	.sc-block
+		display: flex
+		align-items: center 
+		flex-direction: column
+		padding: 0 20px
+		.sc-block-img
+			width: 207px
+			height: 119px
+			margin-bottom: 20px
+			img
+				margin: 0 auto
+				display: block
+		p
+			text-align: center
 
-.owl-nav
-	text-align: center
-	color: green
+
 @import "media" // Always at the end
