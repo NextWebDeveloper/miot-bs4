@@ -27,7 +27,9 @@ $(function() {
     }
 	});
 	
-	$('.your-class').slick();
+	$('.your-class').slick({
+		dots: true
+	});
 
 });
 
