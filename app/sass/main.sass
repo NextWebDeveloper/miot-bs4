@@ -191,28 +191,77 @@ header
 	background: linear-gradient(to bottom, #75cbe7 0%, #138fc2 100%)
 	.carousel-inner
 		.carousel-item
-			h2
-				color: #fff 
-				margin: 20px 0
-				font-weight: bold
-			p
-				color: #fff 
-				margin-bottom: 4rem
-			a		
-				color: #13a8da
+			.row
+				align-items: stretch
+				margin: 0
+				h2
+					color: #fff 
+					margin: 20px 0
+					font-weight: bold
+				p
+					color: #fff
+					margin-bottom: 4rem
+				a		
+					color: #13a8da
+				img 
+					width: 100%
+	.carousel-indicators
+		position: relative
+		margin-top: 3em
+		li
+			text-indent: 0
+			flex-grow: 1
+			.carousel-caption
+				position: absolute
+				top: 10px
+				padding: 0
+				h5
+					margin-bottom: 0
 
-.carousel-indicators
-	position: relative
-	margin-top: 3em
-	li
-		text-indent: 0
-		flex-grow: 1
-		.carousel-caption
-			position: absolute
-			top: 10px
-			padding: 0
-			h5
-				margin-bottom: 0
+.features
+	padding: 100px 0
+	width: 100%	
+	background-color: #f2fefe
+	.features__header
+		
+	.features__card
+		margin-top: 1rem
+		display: flex
+		flex-direction: column
+		text-align: center
+		align-items: center
+		.features__img
+			width: 165px
+			height: 152px
+			display: flex
+			justify-content: center
+			align-items: center
+			img 
+				filter: grayscale(1)
+				transition: all 1s ease
+		.features__text
+			h3 
+				font-size: 24px
+				font-weight: 600
+			p 
+				margin: 0
+		&:hover
+			transform: translateY(-5px)
+			background-color: #fff
+			box-shadow: 0 5px 10px
+			img 
+				filter: none
+
+.price
+	padding: 100px 0
+	width: 100%
+	background: linear-gradient(to bottom, #75cbe7 0%, #138fc2 100%)	
+
+
+
+
+
+
 
 
 @import "media" // Always at the end
