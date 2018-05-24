@@ -61,6 +61,14 @@ a.button-link
 	background-color: #fff
 	border-radius: 20px	
 
+section
+	padding: 100px 0
+	width: 100%
+	&.bg-lite
+		background-color: #f2fefe
+	&.bg-blue
+		background: linear-gradient(to bottom, #75cbe7 0%, #138fc2 100%)	
+
 nav
 	z-index: 999999
 	position: fixed 
@@ -151,9 +159,6 @@ header
 								img							
 									width: 200px
 .service
-	padding: 100px 0
-	width: 100%
-	background-color: #f2fefe
 	.sc-block
 		display: flex
 		align-items: center 
@@ -186,9 +191,6 @@ header
 	// Service carousel bootstrap4 section
 
 .service-carousl
-	padding: 100px 0
-	width: 100%
-	background: linear-gradient(to bottom, #75cbe7 0%, #138fc2 100%)
 	.carousel-inner
 		.carousel-item
 			.row
@@ -197,12 +199,15 @@ header
 				h2
 					color: #fff 
 					margin: 20px 0
-					font-weight: bold
+					font-weight: 600
+					font-size: 40px
 				p
 					color: #fff
 					margin-bottom: 4rem
 				a		
 					color: #13a8da
+					display: inline-block
+					margin-bottom: 1em
 				img 
 					width: 100%
 	.carousel-indicators
@@ -219,11 +224,9 @@ header
 					margin-bottom: 0
 
 .features
-	padding: 100px 0
-	width: 100%	
-	background-color: #f2fefe
 	.features__header
-		
+		font-weight: 600
+		font-size: 30px
 	.features__card
 		margin-top: 1rem
 		display: flex
@@ -252,16 +255,69 @@ header
 			img 
 				filter: none
 
-.price
-	padding: 100px 0
-	width: 100%
-	background: linear-gradient(to bottom, #75cbe7 0%, #138fc2 100%)	
+.price	
+	.price__header
+	.price__description
+		margin-bottom: 60px	
+	.price__card
+		text-align: center
+		background-color: #fff
+		padding: 50px 40px
+		position: relative
+		margin-bottom: 1em
+		h3 
+			font-size: 24px
+			font-weight: 600
+			text-transform: uppercase
+			padding-bottom: 30px
+			margin: 0
+		ul.price__list 
+			list-style-type: none
+			padding: 40px 0 25px 0
+			border-bottom: 1px solid #ddd
+			border-top: 1px solid #ddd
+			li
+				font-size: 15px	
+				margin-bottom: 15px
+		a		
+			color: #ffffff
+			background-color: #13a8da
+			display: inline-block
+			margin-top: 20px
+	.price__card_active
+		padding: 70px 40px	
+		.price__card__crown
+			position: absolute
+			left: 35%
+			top: 0
+			width: 30%
+			height: 30px
+			background-color: darken(#5bbbdd, 10%)
+			border-radius: 0 0 50% 50%	
 
-
-
-
-
-
-
+.team
+	.team__header
+	.team__description
+	.team__person-card
+		background-color: yellow
+		padding-top: 10px
+		.team__personImg
+			margin-bottom: 1em
+			img	
+				width: 100%
+		&:hover
+			.team__personImg img
+				transform: scale(1.1)
+		.team__person
+			text-align: center
+			h4 
+				font-size: 18px
+				font-weight: 600
+				text-transform: uppercase
+			p
+				font-size: 12px
+				font-weight: 600
+			.team__social		
+		
 
 @import "media" // Always at the end
