@@ -299,8 +299,10 @@ header
 	.team__header
 	.team__description
 	.team__person-card
-		background-color: yellow
-		padding-top: 10px
+		background-color: #fff
+		padding-top: 20px
+		box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.4)
+		overflow: hidden
 		.team__personImg
 			margin-bottom: 1em
 			img	
@@ -308,8 +310,17 @@ header
 		&:hover
 			.team__personImg img
 				transform: scale(1.1)
+				transition: 0.4s
+			.team__person h4, .team__person p
+				display: none
+			.team__social
+				position: relative!important
+				transition: 3s
 		.team__person
-			text-align: center
+			display: flex
+			flex-direction: column
+			align-items: center
+			position: relative
 			h4 
 				font-size: 18px
 				font-weight: 600
@@ -317,7 +328,25 @@ header
 			p
 				font-size: 12px
 				font-weight: 600
-			.team__social		
+			.team__social	
+				position: absolute
+				bottom: -90%
+				width: 70%
+				display: flex
+				justify-content: space-around
+				padding: 15px 5px
+				&__link
+					display: flex
+					justify-content: center
+					align-items: center
+					color: #13a8da
+					width: 34px
+					height: 34px
+					border-radius: 50%
+					&:hover
+						color: #ffffff
+						background-color: #13a8da
+						
 		
 
 @import "media" // Always at the end
