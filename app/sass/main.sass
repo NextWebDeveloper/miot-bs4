@@ -303,19 +303,20 @@ header
 		padding-top: 20px
 		box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.4)
 		overflow: hidden
+		margin-bottom: 1em
 		.team__personImg
 			margin-bottom: 1em
 			img	
 				width: 100%
 		&:hover
 			.team__personImg img
-				transform: scale(1.1)
-				transition: 0.4s
+				transform: scale(1.1)	
+				transition: 0.4s			
 			.team__person h4, .team__person p
-				display: none
-			.team__social
-				position: relative!important
-				transition: 3s
+				visibility: hidden
+			.team__social				
+				bottom: 0!important
+				transition: 0.5s
 		.team__person
 			display: flex
 			flex-direction: column
@@ -330,7 +331,9 @@ header
 				font-weight: 600
 			.team__social	
 				position: absolute
-				bottom: -90%
+				bottom: -50px
+				
+				margin-bottom: 0
 				width: 70%
 				display: flex
 				justify-content: space-around
