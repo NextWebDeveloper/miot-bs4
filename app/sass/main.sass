@@ -67,7 +67,7 @@ section
 	&.bg-lite
 		background-color: #f2fefe
 	&.bg-blue
-		background: linear-gradient(to bottom, #75cbe7 0%, #138fc2 100%)	
+		background: linear-gradient(to bottom, #75cbe7 0%, #138fc2 100%)
 
 nav
 	z-index: 999999
@@ -223,10 +223,13 @@ header
 				h5
 					margin-bottom: 0
 
+h2[class$="__header"]
+	font-weight: 600
+	font-size: 30px
+p[class$="__description"]
+	margin-bottom: 60px
+
 .features
-	.features__header
-		font-weight: 600
-		font-size: 30px
 	.features__card
 		margin-top: 1rem
 		display: flex
@@ -256,9 +259,6 @@ header
 				filter: none
 
 .price	
-	.price__header
-	.price__description
-		margin-bottom: 60px	
 	.price__card
 		text-align: center
 		background-color: #fff
@@ -296,8 +296,6 @@ header
 			border-radius: 0 0 50% 50%	
 
 .team
-	.team__header
-	.team__description
 	.team__person-card
 		background-color: #fff
 		padding-top: 20px
@@ -349,7 +347,23 @@ header
 					&:hover
 						color: #ffffff
 						background-color: #13a8da
-						
-		
 
+.reviews
+	color: #ffffff
+	.reviews__carousel
+		.reviews__item
+			display: flex
+			flex-direction: column
+			align-items: center
+			.reviews__photo
+				width: 120px
+				height: 120px
+				img 
+					width: 100%
+			h3 
+				margin-top: 25px
+			p								
+	.reviews__navigation
+		cursor: pointer	
+		color: #ffffff
 @import "media" // Always at the end
