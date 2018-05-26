@@ -362,8 +362,67 @@ p[class$="__description"]
 					width: 100%
 			h3 
 				margin-top: 25px
-			p								
+			p		
+				padding: 0 15px 0 15px						
 	.reviews__navigation
 		cursor: pointer	
 		color: #ffffff
+
+.questions
+	.questions__block
+		border-bottom: 1px solid #ddd
+		margin-bottom: 25px
+		.questions__block__title
+			padding-bottom: 25px
+			button
+				color: $text	
+				display: flex
+				align-items: center	
+				cursor: pointer
+				background-color: transparent
+				border: none	
+				outline: none
+				span
+					position: relative
+					width: 34px
+					height: 34px
+					min-width: 34px
+					border-radius: 50%
+					background-color: darken(#13a8da, 10%)
+					display: block
+					margin-right: 20px
+					&:before
+						content: ""
+						position: absolute
+						left: 11px
+						top: 16px
+						display: block
+						width: 12px
+						height: 2px
+						background-color: #ffffff
+					&:after
+						content: ""
+						position: absolute
+						left: 11px
+						top: 16px
+						display: block
+						width: 12px
+						height: 2px
+						background-color: #ffffff
+						transform: rotate(90deg)
+						transition: transform 0.3s ease
+					&.active
+						&:after
+							transform: rotate(0deg)!important
+				h4 
+					font-size: 16px
+					font-weight: 600
+					margin-bottom: 0
+		.questions__text
+			font-size: 15px
+			margin: 0
+			padding: 0 0 0 54px	
+			display: none
+				
+						
 @import "media" // Always at the end
