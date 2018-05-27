@@ -67,13 +67,16 @@ $(function() {
 	});
 
 	$('.button').on('click', function() {
-		if ( $(this).parent().next().is(':hidden') ) {
-			$(this).parent().next().slideDown();
+		var e = $(this).parent().next();
+		$(this).children('span').toggleClass('active');
+		if ( e.is(':hidden') ) {
+			e.slideDown();
 		} else {
-			$(this).parent().next().slideUp();
+			e.slideUp();
 		}
 	});
 
+	// $('.modified-select').styler();
 
 });
 
