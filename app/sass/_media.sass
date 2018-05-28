@@ -41,18 +41,24 @@
 			flex-direction: column			
 
 @media only screen and (max-width:768px)
-	nav
+	.nav
 		.nav-block
 			.logo
 				a
 					font-size: 25px
-			.navbar
+			.nav__navbar
+				display: none
 				padding-top: 0
 				width: 100%
+				&.navbar-visible
+					display: block
 				.main-nav
+					display: block
 					width: 100%
 					li 
 						a
 							justify-content: center
 							width: 100%
 							padding: 0.5em 0 0 0
+			.nav__navbar-button
+				display: flex

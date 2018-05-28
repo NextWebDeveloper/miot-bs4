@@ -8,6 +8,11 @@ $(function() {
 		}
 	});
 
+	$('.navbar-button').on('click', function() {
+		$('.nav__navbar').toggleClass('navbar-visible');
+		$('.nav').toggleClass('nav__bg');
+	});
+
 	$('.header-carousel').owlCarousel({
     loop:true,
 		nav:false,
