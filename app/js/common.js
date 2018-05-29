@@ -1,5 +1,7 @@
 $(function() {
 
+// Бэкграунд для меню при скролле страницы
+	
 	$(window).scroll(function(){
 		if ($(this).scrollTop() > 0) {
 			$('#nav').css('background-color', '#138fc2');
@@ -8,10 +10,14 @@ $(function() {
 		}
 	});
 
+// Разворачивание меню на маленьких экранах при нажатии на кнопку	
+
 	$('.navbar-button').on('click', function() {
 		$('.nav__navbar').toggleClass('navbar-visible');
 		$('.nav').toggleClass('nav__bg');
 	});
+
+// Активация карусели в секции .header	
 
 	$('.header-carousel').owlCarousel({
     loop:true,
@@ -31,6 +37,8 @@ $(function() {
         }
     }
 	});
+
+// Активация карусели в секции .reviews		
 	
 	$('.reviews__carousel').owlCarousel({
     loop:true,
@@ -54,6 +62,8 @@ $(function() {
 	}
 	});
 
+// Добавление экшн-действий для собственных стилизованных кнопок перелистывания слайдов в секции .reviews	
+
 	var owl=$('.reviews__carousel');
 	$('.reviews__leftArrow').click(function() {
 		owl.trigger('prev.owl.carousel');
@@ -62,14 +72,7 @@ $(function() {
 		owl.trigger('next.owl.carousel')
 	});
 
-	$('.your-class').slick({
-		dots: true
-	});
-
-	$('#span1').on('click', function() {
-		$(this).toggleClass('active');
-		$('#questions__text1').toggleClass('visible');
-	});
+// Показ ответа на вопрос в секции .questions	
 
 	$('.button').on('click', function() {
 		var e = $(this).parent().next();
@@ -81,7 +84,44 @@ $(function() {
 		}
 	});
 
-	// $('.modified-select').styler();
+// Выделение активного пункта меню про скролле страницы
+
+	var menu_selector = ".main-nav"; 
+	var menu = jQuery('#nav').outerHeight();
+	jQuery("#mainnav li:first-child a").addClass("current");
+
+	function onScroll(){
+    var scroll_top = jQuery(document).scrollTop();
+    
+    jQuery(menu_selector + " a").each(function(){
+        var hash = jQuery(this).attr("href");
+        var target = jQuery(hash);
+        if (target.position().top - menu <= scroll_top + 400 && target.position().top + target.outerHeight()  > scroll_top) {
+            jQuery(menu_selector + " a.current").removeClass("current");
+            jQuery(this).addClass("current");
+        } else {
+            jQuery(this).removeClass("current");
+        }
+    });
+	}
+ 
+	jQuery(document).on("scroll", onScroll);
+	jQuery("#mainnav a[href^=#]").click(function(e){
+  	e.preventDefault();
+  	jQuery(document).off("scroll");
+  	jQuery(menu_selector + " .current").removeClass("current");
+  	jQuery(this).addClass("current");
+  	var hash = jQuery(this).attr("href");
+  	var target = jQuery(hash);
+  	jQuery("html, body").animate({
+  	    scrollTop: target.offset().top
+  	}, 300, function(){
+  	    window.location.hash = hash;
+  	    jQuery(document).on("scroll", onScroll);
+		
+  	});
+
+	});
 
 });
 
