@@ -1,5 +1,12 @@
 $(function() {
 
+// Прелоадер
+
+	setTimeout(function() {
+		$("#status").fadeOut();
+		$("#preloader").delay(500).fadeOut("slow");
+	}, 2500);
+
 // Бэкграунд для меню при скролле страницы
 	
 	$(window).scroll(function(){
